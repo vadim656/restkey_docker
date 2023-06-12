@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "timezones",
+  "info": {
+    "singularName": "timezone",
+    "pluralName": "timezones",
+    "displayName": "Часовой пояс- [Устройство]",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "UID": {
+      "type": "uid"
+    }
+  }
+}

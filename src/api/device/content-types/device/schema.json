@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "devices",
+  "info": {
+    "singularName": "device",
+    "pluralName": "devices",
+    "displayName": "Устройства",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "SIN": {
+      "type": "uid"
+    },
+    "object": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::object.object",
+      "inversedBy": "devices"
+    },
+    "object_zone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::object-zone.object-zone",
+      "inversedBy": "devices"
+    },
+    "GSM": {
+      "displayName": "GSM",
+      "type": "component",
+      "repeatable": false,
+      "component": "gsm.gsm"
+    },
+    "Jurnal": {
+      "type": "dynamiczone",
+      "components": [
+        "jurnal-item.jurnal-item"
+      ]
+    }
+  }
+}

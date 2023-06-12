@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "object_types",
+  "info": {
+    "singularName": "object-type",
+    "pluralName": "object-types",
+    "displayName": "Типы - [Обьект]",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "UID": {
+      "type": "uid",
+      "targetField": "Name"
+    },
+    "UserCompany": {
+      "type": "string"
+    },
+    "Icon": {
+      "type": "string",
+      "default": "1"
+    },
+    "Default": {
+      "type": "boolean",
+      "default": false
+    },
+    "ObjectID": {
+      "type": "string"
+    },
+    "object": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::object.object",
+      "inversedBy": "object_types"
+    },
+    "Position": {
+      "type": "integer"
+    }
+  }
+}

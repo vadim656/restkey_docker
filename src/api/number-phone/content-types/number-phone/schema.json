@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "number_phones",
+  "info": {
+    "singularName": "number-phone",
+    "pluralName": "number-phones",
+    "displayName": "Номера - [Устройство]",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FIO": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Desc": {
+      "type": "text"
+    }
+  }
+}

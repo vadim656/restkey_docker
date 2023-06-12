@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "objects",
+  "info": {
+    "singularName": "object",
+    "pluralName": "objects",
+    "displayName": "Обьекты",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "UID": {
+      "type": "uid",
+      "targetField": "Name"
+    },
+    "Icon": {
+      "type": "string"
+    },
+    "UserCompany": {
+      "type": "string"
+    },
+    "Addres": {
+      "type": "string"
+    },
+    "devices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::device.device",
+      "mappedBy": "object"
+    },
+    "TypeID": {
+      "type": "string"
+    },
+    "object_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::object-type.object-type",
+      "mappedBy": "object"
+    },
+    "object_zones": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::object-zone.object-zone",
+      "mappedBy": "object"
+    },
+    "Position": {
+      "type": "integer"
+    },
+    "object_groups": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::object-group.object-group",
+      "mappedBy": "objects"
+    }
+  }
+}

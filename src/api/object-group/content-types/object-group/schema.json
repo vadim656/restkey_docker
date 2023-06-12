@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "object_groups",
+  "info": {
+    "singularName": "object-group",
+    "pluralName": "object-groups",
+    "displayName": "Группы - [Обьект]",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "UID": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "objects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::object.object",
+      "inversedBy": "object_groups"
+    },
+    "Icon": {
+      "type": "string"
+    }
+  }
+}

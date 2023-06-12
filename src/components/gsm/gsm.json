@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_gsm_gsms",
+  "info": {
+    "displayName": "GSM"
+  },
+  "options": {},
+  "attributes": {
+    "Code_PIN": {
+      "type": "string"
+    },
+    "IP_Addres": {
+      "type": "string"
+    },
+    "Hotspot_APN": {
+      "type": "string"
+    },
+    "Password": {
+      "type": "string"
+    }
+  }
+}

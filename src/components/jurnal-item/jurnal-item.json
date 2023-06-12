@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_jurnal_item_jurnal_items",
+  "info": {
+    "displayName": "JurnalItem"
+  },
+  "options": {},
+  "attributes": {
+    "Time": {
+      "type": "string"
+    },
+    "Desc": {
+      "type": "text"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Device": {
+      "type": "string"
+    }
+  }
+}

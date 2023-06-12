@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "object_zones",
+  "info": {
+    "singularName": "object-zone",
+    "pluralName": "object-zones",
+    "displayName": "Зоны - [Обьект]",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "UID": {
+      "type": "uid",
+      "targetField": "Name"
+    },
+    "Icon": {
+      "type": "string",
+      "default": "1"
+    },
+    "UserCompany": {
+      "type": "string"
+    },
+    "Default": {
+      "type": "boolean",
+      "default": false
+    },
+    "ObjectID": {
+      "type": "string"
+    },
+    "object": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::object.object",
+      "inversedBy": "object_zones"
+    },
+    "devices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::device.device",
+      "mappedBy": "object_zone"
+    },
+    "Position": {
+      "type": "integer"
+    }
+  }
+}
