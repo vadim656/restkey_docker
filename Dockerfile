@@ -3,11 +3,11 @@ FROM node:18.0.0
 RUN apt-get update
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
-WORKDIR /opt/
+WORKDIR /
 COPY ./package.json ./yarn.lock ./
 ENV PATH /opt/node_modules/.bin:$PATH
 RUN yarn config set network-timeout 600000 -g && yarn install
-WORKDIR /opt/app
+WORKDIR /app
 COPY ./ .
 RUN yarn build
 EXPOSE 1337
